@@ -99,7 +99,7 @@ jobs:
           aws ecs update-service \
             --cluster ${{ secrets.ECS_CLUSTER }} \
             --service ${{ secrets.ECS_SERVICE }} \
-            --task-definition $TASK_DEF_ARN // 수업에선 추가
+            --task-definition $TASK_DEF_ARN 
             --force-new-deployment
 
       # 13) 배포 완료 대기 (서비스가 안정 상태가 될 때까지)
